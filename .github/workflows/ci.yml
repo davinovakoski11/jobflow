@@ -1,0 +1,26 @@
+name: Tests and build
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+        working-directory: frontend
+      - run: npm test && npm run build
+        working-directory: frontend
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Laravel feature tests
+        run: >-
+          docker run --rm -v "$GITHUB_WORKSPACE/backend:/app" -w /app composer:2
+          sh -c 'composer install --no-interaction --prefer-dist --no-progress && cp .env.example .env && php artisan key:generate && php artisan test --compact'
