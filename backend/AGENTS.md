@@ -1,6 +1,6 @@
 # JobFlow API
 
-API Laravel 13 / PHP 8.3+; o front-end Vue e Quasar fica em ../frontend.
+API Laravel 13 / PHP 8.4+; o front-end Vue e Quasar fica em ../frontend.
 
 - Leia ../README.md para os contratos e os limites atuais.
 - Todas as operações em candidaturas devem usar a relação do usuário autenticado. Nunca aceite user_id do cliente como proprietário.

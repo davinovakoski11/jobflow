@@ -36,7 +36,7 @@ Na primeira execução, as dependências são instaladas, o banco é criado e os
 
 ## Executar sem Docker
 
-Requer **Node.js 22+**, **PHP 8.3+**, Composer 2 e as extensões PHP usuais do Laravel, incluindo `pdo_sqlite`.
+Requer **Node.js 22+**, **PHP 8.4+**, Composer 2 e as extensões PHP usuais do Laravel, incluindo `pdo_sqlite`.
 
 ```sh
 cd backend
