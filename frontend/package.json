@@ -1,0 +1,28 @@
+{
+  "name": "jobflow-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.17.0",
+    "quasar": "^2.35.2",
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "@quasar/vite-plugin": "^2.0.2",
+    "@types/node": "^22.0.0",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "sass-embedded": "^1.93.2",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.5",
+    "vue-tsc": "^3.3.13"
+  },
+  "engines": { "node": ">=22.0.0" }
+}
